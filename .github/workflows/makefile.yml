@@ -20,7 +20,7 @@ jobs:
       run: cd makefile_demo_cpp
     
     - name: Create directory
-      run: make build_dir     
+      run: mkdir build_dir     
 
     - name: Start build
       run: make
