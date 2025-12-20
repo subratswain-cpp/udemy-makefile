@@ -27,8 +27,7 @@ jobs:
     - name: Run executable with test input
       working-directory: makefile_demo_cpp
       run: |
-        echo -e "1\n0\n" | ./bins/uic
-
+        echo -e "EID:3\nEID:5\n0\n" | ./bins/uic
 
     # - name: Run check
     #   working-directory: makefile_demo_cpp
