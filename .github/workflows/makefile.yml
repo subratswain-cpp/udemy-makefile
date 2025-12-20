@@ -23,6 +23,11 @@ jobs:
     - name: Build project using Makefile
       working-directory: makefile_demo_cpp
       run: make
+    
+    - name: Run executable with test input
+      working-directory: makefile_demo_cpp
+      run: |
+        echo -e "1\n0\n" | ./bins/uic
 
 
     # - name: Run check
