@@ -16,10 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: configure
-      run: ./configure
+    - name: Change directory to makefile_demo_cpp
+      run: cd makefile_demo_cpp
+    
+    - name: Create directory
+      run: make build_dir     
 
-    - name: Install dependencies
+    - name: Start build
       run: make
 
     - name: Run check
