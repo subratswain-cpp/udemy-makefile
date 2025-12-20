@@ -16,12 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # - name: Create build directory
-    #   run: mkdir -p build_dir
-    
-    - name: Build project using Makefile 
+    - name: Prepare build directories
+      working-directory: makefile_demo_cpp
+      run: make build_dir
+
+    - name: Build project using Makefile
       working-directory: makefile_demo_cpp
       run: make
+
 
     # - name: Run check
     #   working-directory: makefile_demo_cpp
