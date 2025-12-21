@@ -1,4 +1,4 @@
-name: [WIN] Makefile CI
+name: WIN - Makefile CI
 
 on:
   # push:
