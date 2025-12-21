@@ -1,0 +1,53 @@
+name: Makefile CI
+
+on:
+  # push:
+  #   branches: [ "subrat-makefile" ]
+  # pull_request:
+  #   branches: [ "subrat-makefile" ]
+  workflow_dispatch:
+  
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Prepare build directories
+      working-directory: makefile_demo_cpp
+      run: make build_dir
+
+    - name: Build project using Makefile
+      working-directory: makefile_demo_cpp
+      run: make
+    
+    - name: Run executable with test input
+      working-directory: makefile_demo_cpp
+      run: |
+        echo -e "EID:3\nEID:5\n0\n" | ./bins/uic
+
+    # - name: Run check
+    #   working-directory: makefile_demo_cpp
+    #   run: make check BUILD_DIR=../build_dir
+
+    # - name: Run distcheck
+    #   working-directory: makefile_demo_cpp
+    #   run: make distcheck BUILD_DIR=../build_dir
+
+    # - name: Change directory to makefile_demo_cpp
+    #   run: cd makefile_demo_cpp
+    
+    # - name: Create directory
+    #   run: mkdir build_dir     
+
+    # - name: Start build
+    #   run: make
+
+    # - name: Run check
+    #   run: make check
+
+    # - name: Run distcheck
+    #   run: make distcheck
