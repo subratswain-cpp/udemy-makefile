@@ -3,6 +3,7 @@ Source code of makefile course published in Udemy. ( https://www.udemy.com/cours
 
 # How to build
 Run below commands, one after another.
+1. `cd makefile_demo_cpp`
 1. `make build_dir`
 2. `make`
 
