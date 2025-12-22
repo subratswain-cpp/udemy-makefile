@@ -1,0 +1,28 @@
+name: MAC-Makefile CI
+
+on:
+  push:
+    branches: [ "subrat-makefile" ]
+  pull_request:
+    branches: [ "subrat-makefile" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Prepare Build Directories
+      working-directory: makefile_demo_cpp
+      run: make build_dir
+
+    - name: Build project using Makefile
+      working-directory: makefile_demo_cpp
+      run: make
+
+    - name: Run Executable
+      working-directory: makefile_demo_cpp
+      run: |
+        echo -e "EID:3\nEID:5\n0\n" | ./bins/uic
