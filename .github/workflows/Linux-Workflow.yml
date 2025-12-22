@@ -1,10 +1,11 @@
 name: Linux - Makefile CI
 
 on:
-  push:
-    branches: [ "subrat-makefile" ]
-  pull_request:
-    branches: [ "subrat-makefile" ]
+  # push:
+  #   branches: [ "subrat-makefile" ]
+  # pull_request:
+  #   branches: [ "subrat-makefile" ]
+  workflow_dispatch:
 
 jobs:
   build:
