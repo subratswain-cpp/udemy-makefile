@@ -25,5 +25,5 @@ jobs:
     - name: Run Executable
       working-directory: makefile_demo_cpp
       run: |
-        echo -e "EID:3\nEID:5\n0\n" | ./bin/uic
+        echo -e "EID:3\nEID:5\n0\n" | ./bins/uic
 
