@@ -9,7 +9,7 @@ Run below commands, one after another.
 
 # Verification
 Run
-`./bin/uic`
+`./bins/uic`
 It will ask for `employee id`
 Please enter any of the below IDs for displaying data on screen and 0 to exit.
 ```
